@@ -18,12 +18,11 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 export class App {
   title = 'reactive';
   form: FormGroup = new FormGroup({
-    name: new FormControl('', [
-      Validators.required,
-      Validators.minLength(4),
-      Validators.pattern('[a-zA-Z]*'),
-    ]),
+    name: new FormControl(''),
   });
+  get name() {
+    return this.form.get('name');
+  }
 }
 
 bootstrapApplication(App);
