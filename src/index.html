@@ -1,0 +1,6 @@
+<h1>Signup</h1>
+<form [formGroup]="form">
+  <div>Name</div>
+  <input type="text" formrControlName="name" />
+</form>
+<pre>{{ form.value | json }}</pre>
